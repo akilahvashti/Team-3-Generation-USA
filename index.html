@@ -40,24 +40,27 @@
                 <div class="card">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
-                            <label>Task Name<br><input id="txtTaskName" type="text" name="taskName"></label>
+                            <label>Task Name<br><input id="txtTaskName" type="text" name="taskName" required></label>
                         </li>
                         <li class="list-group-item">
-                            <label>Task Description<br><textarea id="txttaskDescription" rows=3 cols=50 name="taskDescription" ></textarea></label>
+                            <label>Task Description<br><textarea id="txttaskDescription" rows=3 cols=50 name="taskDescription" required></textarea></label>
                         </li>
                         <li class="list-group-item">
-                            <label>Assigned To: <input type="text" name="assignedTo" value=""></label>
+                            <label>Assigned To: <input type="text" name="assignedTo" required></label>
                         </li>
                         <li class="list-group-item">
-                            <label>Due Date: <input type="date" id="dateDue" name="date-due" value="2022-06-08" min="2022-01-01" max="2023-12-31"></label>
+                            <label>Due Date: <input type="date" id="dateDue" name="date-due" value="2022-06-08" min="2022-01-01" max="2023-12-31" required></label>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-center">
+                            <button class="styled " type="button " id="btnAddTask " name="AddTask ">Add Task</button>
                         </li>
                     </ul>
-                    <button class="styled" type="button" id="btnAddTask" name="AddTask ">Add Task</button>
+
                 </div>
             </dev>
             <dev class="col-6 ">
                 <div class="card ">
-                    <button type="button" id="btnStatus" name="Status">Status</button>
+                    <button type="button " id="btnStatus " name="Status ">Status</button>
                     <ul class=" list-group list-group-flush ">
                         <li class="list-group-item "><label>Task Name<br><label id="lblTaskName " type="text " name="lblTaskName "></label></li>
                         <li class="list-group-item "><label>Task Description<br><label id="lblTaskDescription " type="text " name="lblTaskDescription "></label></li>
