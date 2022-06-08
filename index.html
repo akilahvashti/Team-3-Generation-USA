@@ -40,24 +40,29 @@
                 <div class="card">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
-                            <label>Task Name<br><input type="text" name="taskName" value=""></label>
+                            <label>Task Name<br><input id="txtTaskName" type="text" name="taskName"></label>
                         </li>
                         <li class="list-group-item">
-                            <label>Task Description<br><input type="textarea" rows=3 col=50 name="taskDescription" value=""></label>
+                            <label>Task Description<br><textarea id="txttaskDescription" rows=3 cols=50 name="taskDescription" ></textarea></label>
                         </li>
                         <li class="list-group-item">
                             <label>Assigned To: <input type="text" name="assignedTo" value=""></label>
                         </li>
-                        <li class="list-group-item">A third item</li>
+                        <li class="list-group-item">
+                            <label>Due Date: <input type="date" id="dateDue" name="date-due" value="2022-06-08" min="2022-01-01" max="2023-12-31"></label>
+                        </li>
                     </ul>
+                    <button class="styled" type="button" id="btnAddTask" name="AddTask ">Add Task</button>
                 </div>
             </dev>
-            <dev class="col-6">
-                <div class="card">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">An item</li>
-                        <li class="list-group-item">A second item</li>
-                        <li class="list-group-item">A third item</li>
+            <dev class="col-6 ">
+                <div class="card ">
+                    <button type="button" id="btnStatus" name="Status">Status</button>
+                    <ul class=" list-group list-group-flush ">
+                        <li class="list-group-item "><label>Task Name<br><label id="lblTaskName " type="text " name="lblTaskName "></label></li>
+                        <li class="list-group-item "><label>Task Description<br><label id="lblTaskDescription " type="text " name="lblTaskDescription "></label></li>
+                        <li class="list-group-item "><label>Assigned To:<br><label id="lblAssignedTo " type="text " name="lblAssignedTo "></label></li>
+                        <li class="list-group-item "><label>Date Due:<br><label id="lblDateDue " type="date " name="lblDateDue "></label></li>
                     </ul>
                 </div>
             </dev>
