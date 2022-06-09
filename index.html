@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="US-en">
 
 <head>
     <!-- Google Fonts Pre Connect -->
@@ -24,7 +24,7 @@
     <dev class=" container-fluid ">
         <dev class="row ">
             <dev class="col ">
-                <h1 class="display-1 text-center text-bg-secondary p-3 ">Task List</h1>
+                <h1 class="display-1 text-center text-bg-success p-3 ">Task List</h1>
             </dev>
         </dev>
         <dev class="row ">
@@ -41,33 +41,45 @@
                     <form id="myForm" onsubmit="validFormFieldInput(event)"></form>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
-                            <label>Task Name<br><input id="txtTaskName" type="text" name="taskName" placeholder="" required></label>
+                            <label>Task Name<br><input id="txtTaskName" type="text" name="taskName" placeholder="Name of task" required></label>
                         </li>
                         <li class="list-group-item">
-                            <label>Task Description<br><textarea id="txttaskDescription" rows=3 cols=50 name="taskDescription" placeholder="" required></textarea></label>
+                            <label>Task Description<br><textarea id="txttaskDescription" rows=3 cols=50 name="taskDescription" placeholder="Describe the task" required></textarea></label>
                         </li>
                         <li class="list-group-item">
-                            <label>Assigned To: <input type="text" name="assignedTo" placeholder="" required></label>
+                            <label>Assigned To: <input type="text" name="assignedTo" placeholder="Name of person" required></label>
                         </li>
                         <li class="list-group-item">
                             <label>Due Date: <input type="date" id="dateDue" name="date-due" value="2022-06-08" min="2022-01-01" max="2023-12-31" required></label>
                         </li>
                         <li class="list-group-item d-flex justify-content-center">
-                            <button class="btn btn-primary font " id="btnAddTask" type="submit" value="Submit">Add Task</button>
+                            <button class="btn btn-success font " id="btnAddTask" type="submit" value="Submit">Add Task</button>
                         </li>
                     </ul>
                     </form>
                 </div>
             </dev>
-            <dev class="col-6 invisible">
+            <dev class="col-6">
                 <div class="card ">
                     <ul class=" list-group list-group-flush ">
-                        <li class="list-group-item d-flex justify-content-center"><button class="btn btn-primary font " id="btnStatus" type="submit " value="Status">Status</button></li>
-                        <li class="list-group-item "><label>Task Name<br><label id="lblTaskName " type="text " name="lblTaskName "></label></li>
-                        <li class="list-group-item "><label>Task Description<br><label id="lblTaskDescription " type="text " name="lblTaskDescription "></label></li>
-                        <li class="list-group-item "><label>Assigned To:<br><label id="lblAssignedTo " type="text " name="lblAssignedTo "></label></li>
-                        <li class="list-group-item "><label>Date Due:<br><label id="lblDateDue " type="date " name="lblDateDue "></label></li>
-                        <li class="list-group-item "><label>Status:<br><label id="lblStatus" type="text" name="lblStatus "></label></li>
+                        <li class="list-group-item d-flex justify-content-center">
+                            <button class="btn btn-success font " id="btnStatus" type="submit " value="Status">Status</button>
+                        </li>
+                        <li class="list-group-item ">
+                            <label>Task Name<br><label id="lblTaskName " type="text " name="lblTaskName "></label>
+                        </li>
+                        <li class="list-group-item ">
+                            <label>Task Description<br><label id="lblTaskDescription " type="text " name="lblTaskDescription "></label>
+                        </li>
+                        <li class="list-group-item ">
+                            <label>Assigned To:<br><label id="lblAssignedTo " type="text " name="lblAssignedTo "></label>
+                        </li>
+                        <li class="list-group-item ">
+                            <label>Date Due:<br><label id="lblDateDue " type="date " name="lblDateDue "></label>
+                        </li>
+                        <li class="list-group-item ">
+                            <label>Status:<br><label id="lblStatus" type="text" name="lblStatus "></label>
+                        </li>
                     </ul>
                 </div>
             </dev>
