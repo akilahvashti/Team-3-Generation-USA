@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="US-en">
 
 <head>
     <!-- Google Fonts Pre Connect -->
@@ -17,14 +17,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <!-- Title -->
-    <title>Task List</title>
+    <title>Task List App</title>
+
+    <script type="text/javascript">
+        function changeCard() {
+            document.getElementById("card").style.visibility = "visible";
+        }
+    </script>
 </head>
 
 <body class="text-bg-light">
     <dev class=" container-fluid ">
         <dev class="row ">
             <dev class="col ">
-                <h1 class="display-1 text-center text-bg-secondary p-3 ">Task List</h1>
+                <h1 class="display-1 text-center text-bg-success p-3 ">Task List</h1>
             </dev>
         </dev>
         <dev class="row ">
@@ -38,37 +44,61 @@
         <dev class="row">
             <dev class="col-6">
                 <div class="card">
+                    <form id="myForm" onsubmit="validFormFieldInput(event)"></form>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
-                            <label>Task Name<br><input id="txtTaskName" type="text" name="taskName"></label>
+                            <label>Task Name<br><input id="txtTaskName" type="text" name="taskName" placeholder="Name of task" required></label>
                         </li>
                         <li class="list-group-item">
-                            <label>Task Description<br><textarea id="txttaskDescription" rows=3 cols=50 name="taskDescription" ></textarea></label>
+                            <label>Task Description<br><textarea id="txttaskDescription" rows=3 cols=50 name="taskDescription" placeholder="Describe the task" required></textarea></label>
                         </li>
                         <li class="list-group-item">
-                            <label>Assigned To: <input type="text" name="assignedTo" value=""></label>
+                            <label>Assigned To: <input type="text" name="assignedTo" placeholder="Name of person" required></label>
                         </li>
                         <li class="list-group-item">
-                            <label>Due Date: <input type="date" id="dateDue" name="date-due" value="2022-06-08" min="2022-01-01" max="2023-12-31"></label>
+                            <label>Due Date: <input type="date" id="dateDue" name="date-due" min="2022-01-01" max="2023-12-31" required></label>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-center">
+                            <button class="btn btn-success font " id="btnAddTask" type="submit" value="Submit" onclick="changeCard();">Add Task</button>
                         </li>
                     </ul>
-                    <button class="styled" type="button" id="btnAddTask" name="AddTask ">Add Task</button>
+                    </form>
                 </div>
             </dev>
-            <dev class="col-6 ">
-                <div class="card ">
-                    <button type="button" id="btnStatus" name="Status">Status</button>
+            <dev class="col-6">
+                <div id="card" class="card ">
                     <ul class=" list-group list-group-flush ">
-                        <li class="list-group-item "><label>Task Name<br><label id="lblTaskName " type="text " name="lblTaskName "></label></li>
-                        <li class="list-group-item "><label>Task Description<br><label id="lblTaskDescription " type="text " name="lblTaskDescription "></label></li>
-                        <li class="list-group-item "><label>Assigned To:<br><label id="lblAssignedTo " type="text " name="lblAssignedTo "></label></li>
-                        <li class="list-group-item "><label>Date Due:<br><label id="lblDateDue " type="date " name="lblDateDue "></label></li>
+                        <li class="list-group-item ">
+                            <label>Task Name:<label id="lblTaskName " type="text " name="lblTaskName "></label>
+                        </li>
+                        <li class="list-group-item ">
+                            <label>Task Description:<label id="lblTaskDescription " type="text " name="lblTaskDescription "></label>
+                        </li>
+                        <li class="list-group-item ">
+                            <label>Assigned To:<label id="lblAssignedTo " type="text " name="lblAssignedTo "></label>
+                        </li>
+                        <li class="list-group-item ">
+                            <label>Date Due:<label id="lblDateDue " type="date " name="lblDateDue "></label>
+                        </li>
+                        <li class="list-group-item ">
+                            <div class="row ">
+                                <div class="col ">
+                                    <button class="btn btn-warning " id="btnMarkAsDone " type="submit " value="Done ">Mark As Done</button>
+                                </div>
+                                <div class="col ">
+                                    <button class="btn btn-danger " id="btnDelete " type="submit " value="Delete ">Delete</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item ">
+                            <label class="display-5 "><strong>Status:</strong><label id=" lblStatus " type="text " name="lblStatus "></label>
+                        </li>
                     </ul>
                 </div>
             </dev>
         </dev>
         <noscript>Your browser don't support JavaScript!</noscript>
         <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js " integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2 " crossorigin="anonymous "></script>
-        </bodyclass>
+</body>
 
 </html>
