@@ -18,6 +18,12 @@
 
     <!-- Title -->
     <title>Task List App</title>
+
+    <script type="text/javascript">
+        function changeCard() {
+            document.getElementById("card").style.visibility = "visible";
+        }
+    </script>
 </head>
 
 <body class="text-bg-light">
@@ -50,35 +56,42 @@
                             <label>Assigned To: <input type="text" name="assignedTo" placeholder="Name of person" required></label>
                         </li>
                         <li class="list-group-item">
-                            <label>Due Date: <input type="date" id="dateDue" name="date-due" value="2022-06-08" min="2022-01-01" max="2023-12-31" required></label>
+                            <label>Due Date: <input type="date" id="dateDue" name="date-due" min="2022-01-01" max="2023-12-31" required></label>
                         </li>
                         <li class="list-group-item d-flex justify-content-center">
-                            <button class="btn btn-success font " id="btnAddTask" type="submit" value="Submit">Add Task</button>
+                            <button class="btn btn-success font " id="btnAddTask" type="submit" value="Submit" onclick="changeCard();">Add Task</button>
                         </li>
                     </ul>
                     </form>
                 </div>
             </dev>
             <dev class="col-6">
-                <div class="card ">
+                <div id="card" class="card ">
                     <ul class=" list-group list-group-flush ">
-                        <li class="list-group-item d-flex justify-content-center">
-                            <button class="btn btn-success font " id="btnStatus" type="submit " value="Status">Status</button>
+                        <li class="list-group-item ">
+                            <label>Task Name:<label id="lblTaskName " type="text " name="lblTaskName "></label>
                         </li>
                         <li class="list-group-item ">
-                            <label>Task Name<br><label id="lblTaskName " type="text " name="lblTaskName "></label>
+                            <label>Task Description:<label id="lblTaskDescription " type="text " name="lblTaskDescription "></label>
                         </li>
                         <li class="list-group-item ">
-                            <label>Task Description<br><label id="lblTaskDescription " type="text " name="lblTaskDescription "></label>
+                            <label>Assigned To:<label id="lblAssignedTo " type="text " name="lblAssignedTo "></label>
                         </li>
                         <li class="list-group-item ">
-                            <label>Assigned To:<br><label id="lblAssignedTo " type="text " name="lblAssignedTo "></label>
+                            <label>Date Due:<label id="lblDateDue " type="date " name="lblDateDue "></label>
                         </li>
                         <li class="list-group-item ">
-                            <label>Date Due:<br><label id="lblDateDue " type="date " name="lblDateDue "></label>
+                            <div class="row ">
+                                <div class="col ">
+                                    <button class="btn btn-warning " id="btnMarkAsDone " type="submit " value="Done ">Mark As Done</button>
+                                </div>
+                                <div class="col ">
+                                    <button class="btn btn-danger " id="btnDelete " type="submit " value="Delete ">Delete</button>
+                                </div>
+                            </div>
                         </li>
                         <li class="list-group-item ">
-                            <label>Status:<br><label id="lblStatus" type="text" name="lblStatus "></label>
+                            <label class="display-5 "><strong>Status:</strong><label id=" lblStatus " type="text " name="lblStatus "></label>
                         </li>
                     </ul>
                 </div>
