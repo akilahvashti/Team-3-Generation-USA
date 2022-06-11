@@ -19,11 +19,6 @@
     <!-- Title -->
     <title>Task List App</title>
 
-    <script type="text/javascript">
-        function changeCard() {
-            document.getElementById("card").style.visibility = "visible";
-        }
-    </script>
 </head>
 
 <body class="text-bg-light">
@@ -47,7 +42,7 @@
                     <form id="myForm" onsubmit="validFormFieldInput(event)"></form>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
-                            <label>Task Name<br><input id="txtTaskName" type="text" name="taskName" placeholder="Name of task" required></label>
+                            <label id="lblTaskNameEntry">Task Name<br><input id="txtTaskNameEntry" type="text" name="taskName" placeholder="Name of task" required></label>
                         </li>
                         <li class="list-group-item">
                             <label>Task Description<br><textarea id="txttaskDescription" rows=3 cols=50 name="taskDescription" placeholder="Describe the task" required></textarea></label>
@@ -66,19 +61,19 @@
                 </div>
             </dev>
             <dev class="col-6">
-                <div id="card" class="card ">
+                <div id="card" class="card invisible">
                     <ul class=" list-group list-group-flush ">
                         <li class="list-group-item ">
                             <label>Task Name:<label id="lblTaskName " type="text " name="lblTaskName "></label>
                         </li>
                         <li class="list-group-item ">
-                            <label>Task Description:<label id="lblTaskDescription " type="text " name="lblTaskDescription "></label>
+                            <label>Task Description:<label id="lblTaskDescription " type="text" name="lblTaskDescription "></label>
                         </li>
                         <li class="list-group-item ">
                             <label>Assigned To:<label id="lblAssignedTo " type="text " name="lblAssignedTo "></label>
                         </li>
                         <li class="list-group-item ">
-                            <label>Date Due:<label id="lblDateDue " type="date " name="lblDateDue "></label>
+                            <label>Due Date:<label id="lblDateDue " type="date " name="lblDateDue "></label>
                         </li>
                         <li class="list-group-item ">
                             <div class="row ">
