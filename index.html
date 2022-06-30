@@ -42,16 +42,102 @@
                     <form id="myForm" onsubmit="validFormFieldInput(event)"></form>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
-                            <label id="lblTaskNameEntry">Task Name<br><input id="txtTaskNameEntry" type="text" name="taskName" placeholder="Name of task" required></label>
+                            <label id="lblTaskNameEntry">Task One<br><input id="txtTaskNameEntry" type="text" name="taskName" placeholder="HTML" required></label>
                         </li>
                         <li class="list-group-item">
-                            <label>Task Description<br><textarea id="txttaskDescription" rows=3 cols=50 name="taskDescription" placeholder="Describe the task" required></textarea></label>
+                            <label>Task Description<br><textarea id="txttaskDescription" rows=3 cols=50 name="taskDescription" placeholder="working on html, and some css" required></textarea></label>
                         </li>
                         <li class="list-group-item">
-                            <label>Assigned To: <input type="text" name="assignedTo" placeholder="Name of person" required></label>
+                            <label>Assigned To: <input type="text" name="assignedTo" placeholder="Summer Ranaldson & Rob Camhi" required></label>
                         </li>
                         <li class="list-group-item">
-                            <label>Due Date: <input type="date" id="dateDue" name="date-due" min="2022-01-01" max="2023-12-31" required></label>
+                            <label>Due Date: <input type="date" id="dateDue" name="date-due" value="2022-08-01" min="2022-08-01" max="2023-08-02" required></label>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-center">
+                            <button class="btn btn-success font " id="btnAddTask" type="submit" value="Submit" onclick="changeCard();">Add Task</button>
+                        </li>
+                    </ul>
+                    </form>
+                </div>
+                <div class="card">
+                    <form id="myForm" onsubmit="validFormFieldInput(event)"></form>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <label id="lblTaskNameEntry">Task Two <br><input id="txtTaskNameEntry" type="text" name="taskName" placeholder="Coding Project" required></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label>Task Description<br><textarea id="txttaskDescription" rows=3 cols=50 name="taskDescription" placeholder="Assign duties" required></textarea></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label>Assigned To: <input type="text" name="assignedTo" placeholder="Paul Summitt" required></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label>Due Date: <input type="date" id="dateDue" name="date-due" value="2022-08-01" min="2022-08-01" max="2023-08-05" required></label>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-center">
+                            <button class="btn btn-danger font " id="btnAddTask" type="submit" value="Submit" onclick="changeCard();">Add Task</button>
+                        </li>
+                    </ul>
+                    </form>
+                </div>
+                <div class="card">
+                    <form id="myForm" onsubmit="validFormFieldInput(event)"></form>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <label id="lblTaskNameEntry">Task Three<br><input id="txtTaskNameEntry" type="text" name="taskName" placeholder="Email group members" required></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label>Task Description<br><textarea id="txttaskDescription" rows=3 cols=50 name="taskDescription" placeholder="delegate duties" required></textarea></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label>Assigned To: <input type="text" name="assignedTo" placeholder="Monica Jackson" required></label>
+                        </li>
+                        <li class="list-group-item">-
+                            <label>Due Date: <input type="date" id="dateDue" name="date-due" value="2022-08-02" min="2022-08-02" max="2023-08-03" required></label>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-center">
+                            <button class="btn btn-success font " id="btnAddTask" type="submit" value="Submit" onclick="changeCard();">Add Task</button>
+                        </li>
+                    </ul>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <form id="myForm" onsubmit="validFormFieldInput(event)"></form>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <label id="lblTaskNameEntry">Task Four<br><input id="txtTaskNameEntry" type="text" name="taskName" placeholder="Design the page" required></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label>Task Description<br><textarea id="txttaskDescription" rows=3 cols=50 name="taskDescription" placeholder="Working with wireframe in figma" required></textarea></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label>Assigned To: <input type="text" name="assignedTo" placeholder="Charlsey Duran" required></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label>Due Date: <input type="date" id="dateDue" name="date-due" value="2022-08-03" min="2022-08-03" max="2023-08-04" required></label>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-center">
+                            <button class="btn btn-success font " id="btnAddTask" type="submit" value="Submit" onclick="changeCard();">Add Task</button>
+                        </li>
+                    </ul>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <form id="myForm" onsubmit="validFormFieldInput(event)"></form>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <label id="lblTaskNameEntry">Task Five<br><input id="txtTaskNameEntry" type="text" name="taskName" placeholder="Project Management" required></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label>Task Description<br><textarea id="txttaskDescription" rows=3 cols=50 name="taskDescription" placeholder="Oversee the project" required></textarea></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label>Assigned To: <input type="text" name="assignedTo" placeholder="Akilah Witherspoon" required></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label>Due Date: <input type="date" id="dateDue" name="date-due" value="2022-08-05" min="2022-08-05" max="2023-08-06" required></label>
                         </li>
                         <li class="list-group-item d-flex justify-content-center">
                             <button class="btn btn-success font " id="btnAddTask" type="submit" value="Submit" onclick="changeCard();">Add Task</button>
