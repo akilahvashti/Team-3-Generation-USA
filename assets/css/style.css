@@ -112,6 +112,7 @@ button.markDOM {
 	align-items: center;
 	background-color: #d4c1ec;
 	width: 100%;
+	display: none;
 }
 
 #taskCard {
