@@ -6,12 +6,53 @@ body {
 	background-color: #f2dfd7 !important;
 }
 
+.addTask {
+	margin-left: 1em;
+}
+
 .font {
 	font-size: 1.3em;
 }
 
+.fontTask {
+	font-size: 2em;
+}
+
+.taskFont {
+	font-size: 1em;
+}
+
+.nameInput {
+	width: 75%;
+	max-width: 90em;
+	height: 3em;
+}
+
+textarea {
+	width: 75%;
+}
+
+#Assigned {
+	height: 3em;
+	width: 90%;
+}
+
+#newDueDateInput {
+	width: 90%;
+	height: 3em;
+}
+
 #myForm {
 	margin-left: 2em;
+}
+
+div.row {
+	display: flex;
+	width: 100%;
+}
+
+div.card {
+	width: 25em !important;
 }
 
 .alignment {
@@ -19,12 +60,26 @@ body {
 	justify-content: space-between;
 }
 
+.tasks-list {
+	background-color: #fef9ff;
+	font-size: 3em !important;
+}
+
+
 .addBtn {
 	background-color: #9f9fed !important;
 	border: 0.1em solid #00241b !important;
 	width: 100%;
 	margin: 0;
 	max-width: 80vw;
+}
+
+button.markDOM {
+	background-color: #9f9fed !important;
+	border: 0.1em solid #00241b !important;
+	font-size: 0.8em;
+	word-break: break-word;
+	max-width: 9em;
 }
 
 .delete-button {
@@ -37,7 +92,6 @@ body {
 	align-items: center;
 	background-color: #d4c1ec;
 	width: 100%;
-	display: none;
 }
 
 #taskCard {

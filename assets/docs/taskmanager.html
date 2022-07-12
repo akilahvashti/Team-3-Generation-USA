@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">    
+    <title>To-Do List App</title>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1 class="tasks-list display-4 text-center">Tasks List</h1>
+      </div>
+      <h1 class="addTask">
+          Add New Task
+      </h1>
+      <br>
+      <p id="error"><p/>
+    <form id="myForm" onsubmit="validFormFieldInput(event)">
+        <label class="font" for="newTaskNameInput">Task Name:</label><br><br>
+        <input class="nameInput" type="text" id="TaskName" name="newTaskNameInput" placeholder="" required><br><br>
+      </div>
+      <br>
+        <label class="font w-100" for="TaskD">Task Description:</label><br><br>
+        <textarea class=".col-8 .col-sm-6" type="text" id="newTaskDescriptionInput" name="TaskD" cols="50" rows="4" placeholder=""  required></textarea></br></br>
+        <br>
+      <div class="row">
+        <div class="col-sm-5 mt-4">
+        <label class="font" for="newAssignedInput">Assigned To:</label><br>
+        <input type=text" id="Assigned" name="newAssignedInput" placeholder="" required>
+        </div>
+        <div class="col-sm-5 mt-4">
+        <label class="font" for="DueDate">Due Date</label><br>
+        <input type="date" id="newDueDateInput" name="DueDate" required>
+        </div>
+      </div>
+        <br><br>
+      <div class="">
+      <button class="addBtn btn btn-primary font" id="btn"  type="submit" value="Submit">Add Task</button></div><br><br>
+    </div>
+    </form>
+    
+    <h2 class="fontTask">
+        Tasks
+    </h2>
+<br>
+    <!-- <button type="button" class="btn btn-warning">View Task</button> -->
+<br>
+    
+<br>
+<div class="taskFont">
+    <ul id="taskList" class=" list-group">
+      </ul>
+    </div>
+    <footer class="footer">
+      <span class="text-center">Made with <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+      </svg></span>
+    </footer>
+      <script src="./js/taskManager.js"></script>
+      <script src="./js/index.js"></script>
+</body>
+</html>
