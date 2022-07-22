@@ -1,19 +1,67 @@
-.styled {
-    padding: 0 20px;
-    font-size: 1rem;
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 1px #000;
-    border-radius: 10px;
-    background-color: rgba(220, 0, 0, 1);
-    background-image: linear-gradient(to top left, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 30%, rgba(0, 0, 0, 0));
-    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6), inset -2px -2px 3px rgba(0, 0, 0, .6);
+* {
+	font-family: 'Space Mono', monospace;
 }
 
-.styled:hover {
-    background-color: rgba(255, 0, 0, 1);
+body {
+	background-color: #f2dfd7 !important;
 }
 
+.font {
+	font-size: 1.3em;
+}
+
+#myForm {
+	margin-left: 2em;
+}
+
+.alignment {
+	display: flex;
+	justify-content: space-between;
+}
+
+.addBtn {
+	background-color: #9f9fed !important;
+	border: 0.1em solid #00241b !important;
+	width: 100%;
+	margin: 0;
+	max-width: 80vw;
+}
+
+.delete-button {
+	word-break: break-word;
+	min-width: 6em;
+}
+
+#taskList {
+	display: flex;
+	align-items: center;
+	background-color: #d4c1ec;
+	width: 100%;
+	display: none;
+}
+
+#taskCard {
+	background-color: white;
+	border-radius: 30px !important;
+	width: 80%;
+	max-width: 30em;
+	height: auto;
+	margin: 3em 3em;
+}
+
+#error {
+	width: 20em;
+}
+
+.footer {
+	bottom: 0;
+	width: 100%;
+	height: 2.5rem;   
+	text-align: center;
+	background-color: #736CED;
+}
+
+<<<<<<< HEAD
 .styled:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6), inset 2px 2px 3px rgba(0, 0, 0, .6);
 }
@@ -135,3 +183,8 @@ button.markDOM {
 	background-color: #736CED;
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 52ebaaa2a6afdb1febe22b37a35990476b94925d
+>>>>>>> fc13806392fd312a1a6dd2b23f682eb9daf1f11e

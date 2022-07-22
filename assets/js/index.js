@@ -21,7 +21,7 @@ const validFormFieldInput = (e) => {
 
 	document.getElementById("myForm").reset();
 };
-
+document.getElementById("btnAddTask").style.display='block';
 document.getElementById("btnAddTask").addEventListener("click", function() {
 	const taskName = newTaskNameInput.value;
 	const taskDescription = newTaskDescriptionInput.value;
