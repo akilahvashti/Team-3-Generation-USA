@@ -3,19 +3,22 @@ let tasks = new TaskManager;
 tasks.load();
 tasks.render();
 
-const newTaskNameInput = document.getElementById("#taskName");
-console.log(newTaskNameInput.value)
-const newTaskDescriptionInput = document.getElementById("#taskDescription");
-const newAssignedInput = document.getElementById("#assignedTo");
-const newDueDateInput = document.getElementById("#dueDate");
+const newTaskNameInput = document.querySelector("#taskName");
+const newTaskDescriptionInput = document.querySelector("#taskDescription");
+const newAssignedInput = document.querySelector("#assignedTo");
+const newDueDateInput = document.querySelector("#dueDate");
 
 const validFormFieldInput = (e) => {
 	e.preventDefault();
 	const name = newTaskNameInput.value;
-	console.log("Name:  " + name);
 	const taskDescription = newTaskDescriptionInput.value;
 	const assignedTo = newAssignedInput.value;
 	const dueDate = newDueDateInput.value;
+
+	console.log("Name:  " + name);
+	console.log("taskDescription:  " + taskDescription);
+	console.log("assignedTo:  " + assignedTo);
+	console.log("dueDate:  " + dueDate);
 
 	tasks.addTask(name, taskDescription, assignedTo, dueDate);
 	tasks.render();
