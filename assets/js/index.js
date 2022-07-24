@@ -1,34 +1,36 @@
-let tasks = new TaskListManager;
+let tasks = new TaskManager;
 
 tasks.load();
 tasks.render();
 
-const newTaskNameInput = document.getElementById("taskName");
-const newTaskDescriptionInput = document.getElementById("taskDescription");
-const newAssignedInput = document.getElementById("assignedTo");
-const newDueDateInput = document.getElementById("dueDate");
+const newTaskNameInput = document.getElementById("#taskName");
+console.log(newTaskNameInput.value)
+const newTaskDescriptionInput = document.getElementById("#taskDescription");
+const newAssignedInput = document.getElementById("#assignedTo");
+const newDueDateInput = document.getElementById("#dueDate");
 
 const validFormFieldInput = (e) => {
 	e.preventDefault();
-	const taskName = newTaskNameInput.value;
+	const name = newTaskNameInput.value;
+	console.log("Name:  " + name);
 	const taskDescription = newTaskDescriptionInput.value;
 	const assignedTo = newAssignedInput.value;
 	const dueDate = newDueDateInput.value;
 
-	tasks.addTask(taskName, taskDescription, assignedTo, dueDate);
+	tasks.addTask(name, taskDescription, assignedTo, dueDate);
 	tasks.render();
 	tasks.save();
 
 	document.getElementById("myForm").reset();
 };
-document.getElementById("btnAddTask").style.display='block';
+
 document.getElementById("btnAddTask").addEventListener("click", function() {
-	const taskName = newTaskNameInput.value;
+	const name = newTaskNameInput.value;
 	const taskDescription = newTaskDescriptionInput.value;
 	const assignedTo = newAssignedInput.value;
 	const dueDate = newDueDateInput.value;
 
-	if (taskName === "") {
+	if (name === "") {
 		document.getElementById("error").innerHTML = `<div id="error" class="alert alert-primary" role="alert">
 	Please input name field!
   </div>`;
@@ -51,7 +53,7 @@ Please input the Due Date field!
 
 // Event listener for mark as done button.
 
-const taskList = document.qetElementById("displayCard2");
+const taskList = document.querySelector("#displayCard2");
 
 taskList.addEventListener("click", (event) => {
 	if (event.target.classList.contains("btnMarkAsDone")) {
