@@ -19,6 +19,8 @@ const validFormFieldInput = (e) => {
 	tasks.render();
 	tasks.save();
 
+	console.log(tasks)
+
 	document.getElementById("myForm").reset();
 };
 
