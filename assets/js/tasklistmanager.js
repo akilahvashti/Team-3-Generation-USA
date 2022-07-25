@@ -61,7 +61,7 @@ class TaskManager {
 
 			taskHtmlList.push(taskHtml);
 			const tasksHtml = taskHtmlList.join(""); // join("/n")
-			document.getElementById("taskList").innerHTML = tasksHtml;
+			document.getElementById("displayCard2").innerHTML = tasksHtml;
 		}
 	}
 

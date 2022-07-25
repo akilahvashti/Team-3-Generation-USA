@@ -15,11 +15,6 @@ const validFormFieldInput = (e) => {
 	const assignedTo = newAssignedInput.value;
 	const dueDate = newDueDateInput.value;
 
-	console.log("Name:  " + name);
-	console.log("taskDescription:  " + taskDescription);
-	console.log("assignedTo:  " + assignedTo);
-	console.log("dueDate:  " + dueDate);
-
 	tasks.addTask(name, taskDescription, assignedTo, dueDate);
 	tasks.render();
 	tasks.save();
