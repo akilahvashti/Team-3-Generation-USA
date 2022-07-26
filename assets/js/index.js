@@ -56,10 +56,12 @@ Please input the Due Date field!
 const taskList = document.querySelector("#displayCard2");
 
 taskList.addEventListener("click", (event) => {
+	console.log(event);
 	if (event.target.classList.contains("btnMarkAsDone")) {
 		let parentTask = event.target.parentNode.parentNode.parentNode;
         let taskId = parseInt(parentTask.getAttribute("data-task-id"));
         let task = tasks.getTaskById(taskId);
+		console.log(parentTask);
         task.status = 'Done';
 
 		if (task.status === 'Done') {
