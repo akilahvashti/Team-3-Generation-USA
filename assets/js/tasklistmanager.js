@@ -1,40 +1,40 @@
 
-const createTaskHtml = (taskName, taskDescription, assignedTo, dueDate, status, id) => {
+const createTaskHtml = (Name, taskDescription, assignedTo, dueDate, status, id) => {
 	let doneButtonVisibility = "visible";
 	if (status === "Done") {
 		doneButtonVisibility = "invisible";
 	}
 
-	return `        <li id="taskCard" class="list-group-item" data-task-id = "${id}">
+	return `        <li id="displayCard2" class="list-group-item" data-task-id = "${id}">
 		<div class="card-body" id="data-task-id">
 		  <div class="alignment">
-		    <p class="card-text" id="title"><span class="fw-bold">Task Name:</span> ${taskName}</p>
-			<button type="button" class="markDOM btn btn-secondary done-button ${doneButtonVisibility}">Mark as done</button>
+		    <p class="card-text" id="title"><span class="fw-bold">Task Name:</span> ${Name}</p>
+			<button type="button" class="markDOM btn btn-secondary btnMarkAsDone done-button ${doneButtonVisibility}">Mark as done</button>
 			</div>
 		  <p class="card-text"><span class="fw-bold">Task Description:</span> ${taskDescription}</p>
-		  <p class="card-text"><span class="fw-bold">Assigned Date:</span> ${assignedTo}</p>
+		  <p class="card-text"><span class="fw-bold">Assigned to:</span> ${assignedTo}</p>
 		  <p class="card-text"><span class="fw-bold">Due Date:</span> ${dueDate}</p>
 		  <div class="alignment">
 		  <p class="card-text"><span class="fw-bold">Status:</span> ${status}</p>
 		  <div class="move">
-		      <button type="button" class="btn btn-danger delete-button">Delete</button>
+		      <button type="button" class="btn btn-danger delete-button btnDelete">Delete</button>
 		  </div>
 		</div>
 	  </div>
 </li>`;
 };
 
-class TaskListManager {
+class TaskManager {
 	constructor(tasks, currentId) {
 		this._tasks = [];
 		this._currentId = 0;
 	}
 
-	addTask(taskName, taskDescription, assignedTo, dueDate, status = "ToDo") {
+	addTask(Name, taskDescription, assignedTo, dueDate, status = "ToDo") {
 		this._currentId++;
 		const newTask = {
 			id: this._currentId,
-			taskName,
+			Name,
 			taskDescription,
 			assignedTo,
 			dueDate,
@@ -51,8 +51,8 @@ class TaskListManager {
 			let date = new Date(task.dueDate);
 			let formattedDate = date.getMonth() + 1 + "/" + (date.getDate() + 1) + "/" + date.getFullYear();
 			const taskHtml = createTaskHtml(
-				task.name,
-				task.description,
+				task.Name,
+				task.taskDescription,
 				task.assignedTo,
 				formattedDate,
 				task.status,
@@ -61,7 +61,7 @@ class TaskListManager {
 
 			taskHtmlList.push(taskHtml);
 			const tasksHtml = taskHtmlList.join(""); // join("/n")
-			document.getElementById("taskList").innerHTML = tasksHtml;
+			document.getElementById("displayCard2").innerHTML = tasksHtml;
 		}
 	}
 
@@ -110,5 +110,5 @@ class TaskListManager {
 	}
 }
 
-exports.TaskListManager = TaskListManager;
+exports.TaskManager = TaskManager;
 
