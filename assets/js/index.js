@@ -79,7 +79,7 @@ taskList.addEventListener("click", (event) => {
 	if (event.target.classList.contains("delete-button")) {
 		let parentTask = event.target.parentNode.parentNode.parentNode.parentNode;
 		let taskId = parseInt(parentTask.getAttribute("data-task-id"));
-		document.getElementById("taskList").innerHTML = "";
+		document.getElementById("displayCard2").innerHTML = "";
 		tasks.deleteTask(taskId)
 		tasks.save()
 		tasks.render()
