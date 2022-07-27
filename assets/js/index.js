@@ -3,6 +3,7 @@ let tasks = new TaskManager;
 tasks.load();
 tasks.render();
 
+// retrieve data from form fields
 const newTaskNameInput = document.querySelector("#taskName");
 const newTaskDescriptionInput = document.querySelector("#taskDescription");
 const newAssignedInput = document.querySelector("#assignedTo");
@@ -10,17 +11,19 @@ const newDueDateInput = document.querySelector("#dueDate");
 
 const validFormFieldInput = (e) => {
 	e.preventDefault();
+
+	// assign values to variables
 	const name = newTaskNameInput.value;
 	const taskDescription = newTaskDescriptionInput.value;
 	const assignedTo = newAssignedInput.value;
 	const dueDate = newDueDateInput.value;
 
+	// add variables to tasks
 	tasks.addTask(name, taskDescription, assignedTo, dueDate);
 	tasks.render();
 	tasks.save();
 
-	console.log(tasks)
-
+	// reset the form
 	document.getElementById("myForm").reset();
 };
 
@@ -73,10 +76,10 @@ taskList.addEventListener("click", (event) => {
         tasks.save();
 	}
 
-	if (event.target.classList.contains("btnDelete")) {
+	if (event.target.classList.contains("delete-button")) {
 		let parentTask = event.target.parentNode.parentNode.parentNode.parentNode;
 		let taskId = parseInt(parentTask.getAttribute("data-task-id"));
-		document.getElementById("taskList").innerHTML = "";
+		document.getElementById("displayCard2").innerHTML = "";
 		tasks.deleteTask(taskId)
 		tasks.save()
 		tasks.render()

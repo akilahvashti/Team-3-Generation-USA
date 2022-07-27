@@ -9,7 +9,7 @@ const createTaskHtml = (Name, taskDescription, assignedTo, dueDate, status, id) 
 		<div class="card-body" id="data-task-id">
 		  <div class="alignment">
 		    <p class="card-text" id="title"><span class="fw-bold">Task Name:</span> ${Name}</p>
-			<button type="button" class="markDOM btn btn-secondary btnMarkAsDone done-button ${doneButtonVisibility}">Mark as done</button>
+			<button type="button" class="markDOM btn btn-secondary done-button btnMarkAsDone ${doneButtonVisibility}">Mark as done</button>
 			</div>
 		  <p class="card-text"><span class="fw-bold">Task Description:</span> ${taskDescription}</p>
 		  <p class="card-text"><span class="fw-bold">Assigned to:</span> ${assignedTo}</p>
@@ -24,12 +24,14 @@ const createTaskHtml = (Name, taskDescription, assignedTo, dueDate, status, id) 
 </li>`;
 };
 
+// create TaskManager class
 class TaskManager {
 	constructor(tasks, currentId) {
-		this._tasks = [];
-		this._currentId = 0;
+		this._tasks = [];  // empty array for tasks
+		this._currentId = 0;  // sets current ID to 0
 	}
 
+	// add unique ID and data to tasks item
 	addTask(Name, taskDescription, assignedTo, dueDate, status = "ToDo") {
 		this._currentId++;
 		const newTask = {
@@ -43,6 +45,7 @@ class TaskManager {
 		this._tasks.push(newTask);
 	}
 
+	// add new task to right display card of page
 	render() {
 		const taskHtmlList = [];
 
@@ -96,6 +99,7 @@ class TaskManager {
 		}
 	}
 
+	// code behind delete button
 	deleteTask(taskId) {
 		let newTasks = [];
 
